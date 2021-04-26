@@ -4,8 +4,7 @@
 # In[2]:
 
 
-class student:
-    studentData=[]
+studentData=[]
     def number_of_student ():
         print ("Number of student:")
     
@@ -39,8 +38,7 @@ class student:
 # In[3]:
 
 
-class course:
-    courseData=[]
+courseData=[]
     def number_of_course ():
         print ("Number of course:")
     
@@ -77,7 +75,6 @@ def select_course(course_name):
     no_course = int(input("ID of the course: "))
     return no_course
 
-class mark_sheet:
     def create_mark_sheet(number_course, number_student):
         mark_sheet = [[0 for i in range(number_student)] for j in range(number_course)]
         return mark_sheet
@@ -90,7 +87,11 @@ class mark_sheet:
 
 # In[4]:
 
-
+number_student = get_number_student ()
+student_name, student_id, student_dob = get_infor_of_student()
+number_course = get_number_course()
+course_name, course_id = get_infor_of_course()
+mark_sheet = create_mark_sheet()
 while True:
     action = int(input("Press 1: infor of student.\ Press 2: infor of course.\ Press 3: marking.\ Press 0: stop."))
     if action == 1:
